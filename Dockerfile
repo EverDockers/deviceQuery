@@ -1,5 +1,5 @@
 # FROM defines the base image
-FROM nvidia/cudia
+FROM nvidia/cuda
 
 # RUN executes a shell command
 # You can chain multiple commands together with &&
@@ -11,7 +11,7 @@ RUN apt update && apt install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/*
 
 # set the working directory
-WORKDIR /usr/local/cuda/samples/1_Utilities/devceQuery
+WORKDIR /usr/local/cuda/samples/1_Utilities/deviceQuery
 
 RUN make
 
